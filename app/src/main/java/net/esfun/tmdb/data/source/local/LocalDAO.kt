@@ -1,4 +1,4 @@
-package net.esfun.tmdb.data.local
+package net.esfun.tmdb.data.source.local
 
 import androidx.room.Dao
 import androidx.room.Insert

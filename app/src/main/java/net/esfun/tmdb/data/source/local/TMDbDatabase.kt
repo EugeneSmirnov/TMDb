@@ -1,4 +1,4 @@
-package net.esfun.tmdb.data.local
+package net.esfun.tmdb.data.source.local
 
 import android.content.Context
 import androidx.room.Database
@@ -17,9 +17,9 @@ abstract class TMDbDatabase  : RoomDatabase(){
     companion object{
         private var INSTANCE: TMDbDatabase? = null
         private val lock = Any()
-        fun getInstance(context: Context):TMDbDatabase{
+        fun getInstance(context: Context): TMDbDatabase {
             synchronized(lock){
-                if (INSTANCE==null){
+                if (INSTANCE ==null){
                     INSTANCE = Room.databaseBuilder(
                         context.applicationContext,
                         TMDbDatabase::class.java, "TMDb.db").build()

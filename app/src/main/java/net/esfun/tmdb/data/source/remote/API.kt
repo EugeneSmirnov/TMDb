@@ -1,4 +1,4 @@
-package net.esfun.tmdb.data.remote
+package net.esfun.tmdb.data.source.remote
 
 import net.esfun.tmdb.data.model.TmdbMovie
 import net.esfun.tmdb.data.model.TmdbMovieResponse

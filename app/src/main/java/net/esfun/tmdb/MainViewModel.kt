@@ -6,11 +6,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.*
 import kotlinx.coroutines.GlobalScope.coroutineContext
-import net.esfun.tmdb.TMDbApp
 
 import net.esfun.tmdb.data.model.TmdbMovie
 import net.esfun.tmdb.data.model.TmdbTV
-import net.esfun.tmdb.data.remote.ImplRemoteDAO
+import net.esfun.tmdb.data.source.remote.ImplRemoteDAO
 
 class MainViewModel : ViewModel() {
 

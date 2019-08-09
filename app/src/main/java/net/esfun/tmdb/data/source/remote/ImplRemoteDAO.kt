@@ -1,4 +1,4 @@
-package net.esfun.tmdb.data.remote
+package net.esfun.tmdb.data.source.remote
 
 import net.esfun.tmdb.data.TmdbDataSource
 import net.esfun.tmdb.data.model.TmdbMovie
@@ -53,30 +53,34 @@ object ImplRemoteDAO: TmdbDataSource {
     private val api = retrofit.create(API::class.java)
 
     override suspend fun getMovie(id: Int): TmdbMovie{
-        return ImplRemoteDAO.api.getMovie(id,language )
+        return api.getMovie(id,
+            language
+        )
     }
 
     override suspend fun getPopularMovies(page:Int): TmdbMovieResponse {
-        return ImplRemoteDAO.api.getPopularMovie(language, page)
+        return api.getPopularMovie(language, page)
     }
 
     override suspend fun getTopRatedMovies(page: Int): TmdbMovieResponse {
-        return ImplRemoteDAO.api.getTopRatedMovies(language, page)
+        return api.getTopRatedMovies(language, page)
     }
 
     override suspend fun getTV(id: Int): TmdbTV {
-        return ImplRemoteDAO.api.getTV(id, language)
+        return api.getTV(id,
+            language
+        )
     }
 
     override suspend fun getPopularTV(page: Int): TmdbTVResponse {
-        return ImplRemoteDAO.api.getPopularTV(language, page)
+        return api.getPopularTV(language, page)
     }
 
     override suspend fun getLatestTV(): TmdbTVResponse {
-        return ImplRemoteDAO.api.getLatestTV(language)
+        return api.getLatestTV(language)
     }
 
     override suspend fun getLatestMovie(): TmdbMovieResponse {
-        return ImplRemoteDAO.api.getLatestMovie(language)
+        return api.getLatestMovie(language)
     }
 }

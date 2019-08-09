@@ -72,9 +72,7 @@ class MainListFragment : Fragment() {
 
         liveData.observe(this,
             Observer {
-                var rText = "Loaded ${it?.size}"
-                if (it?.size == 0) rText = "Loading..."
-                Toast.makeText(activity, rText, Toast.LENGTH_SHORT).show()
+                if (it?.size == 0) Toast.makeText(activity, "Loading...", Toast.LENGTH_SHORT).show()
                 arrayList.clear()
                 arrayList.addAll(it)
                 recycleView.adapter?.notifyDataSetChanged()
