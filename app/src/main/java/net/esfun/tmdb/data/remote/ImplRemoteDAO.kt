@@ -16,7 +16,6 @@ import java.util.concurrent.TimeUnit
 
 object ImplRemoteDAO: TmdbDataSource {
 
-
     private val SERVER_URL = "https://api.themoviedb.org/3/"
     const val API_KEY = "3ba9337bc3b8a1bb0202c51ad066f076"
     const val language = "ru-RU"
@@ -73,4 +72,11 @@ object ImplRemoteDAO: TmdbDataSource {
         return ImplRemoteDAO.api.getPopularTV(language, page)
     }
 
+    override suspend fun getLatestTV(): TmdbTVResponse {
+        return ImplRemoteDAO.api.getLatestTV(language)
+    }
+
+    override suspend fun getLatestMovie(): TmdbMovieResponse {
+        return ImplRemoteDAO.api.getLatestMovie(language)
+    }
 }

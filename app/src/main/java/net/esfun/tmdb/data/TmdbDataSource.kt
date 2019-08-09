@@ -13,5 +13,8 @@ interface TmdbDataSource {
     suspend fun getTV(id:Int):TmdbTV
     suspend fun getPopularTV(page:Int):TmdbTVResponse
 
+    suspend fun getLatestTV():TmdbTVResponse
+    suspend fun getLatestMovie(): TmdbMovieResponse
+
 
 }

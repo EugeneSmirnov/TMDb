@@ -15,7 +15,7 @@ class TVAdapter(
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.txtName.text = list[position].name
+        holder.txtName.text = list[position].title
         holder.txtOverview.text = list[position].overview
         holder.txtVote.text = "${list[position].voteAverage}"
         holder.imageView.loadUsualImage("https://image.tmdb.org/t/p/w500${list[position].backdropPath}")

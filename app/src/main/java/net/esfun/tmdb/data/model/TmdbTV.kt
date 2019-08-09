@@ -11,7 +11,8 @@ data class TmdbTV(
     @SerializedName("vote_average")
     val voteAverage: Double,
 
-    val name: String,
+    @SerializedName("name")
+    val title: String,
     val overview: String,
 
     @SerializedName("backdrop_path")

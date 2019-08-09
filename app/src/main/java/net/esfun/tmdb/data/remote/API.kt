@@ -25,6 +25,10 @@ interface API {
     @GET("tv/popular")
     suspend fun getPopularTV( @Query("language") language: String, @Query("page") page: Int):TmdbTVResponse
 
+    @GET("tv/latest")
+    suspend fun getLatestTV(@Query("language") language: String):TmdbTVResponse
 
+    @GET("movie/latest")
+    suspend fun getLatestMovie(@Query("language") language: String):TmdbMovieResponse
 
 }

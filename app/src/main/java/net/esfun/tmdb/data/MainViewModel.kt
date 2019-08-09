@@ -43,6 +43,9 @@ class MainViewModel : ViewModel() {
         return tvs
     }
 
+    fun <T> getFromDb(list: List<T>){
+
+    }
 
     fun fetchMovie() {
         viewModelScope.launch(coroutineContext) {
