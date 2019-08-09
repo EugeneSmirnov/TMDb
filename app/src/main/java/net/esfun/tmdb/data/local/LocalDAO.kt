@@ -27,4 +27,7 @@ import androidx.room.OnConflictStrategy
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertMovies(movies: List<TmdbMovie>)
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertTVs(tvs: List<TmdbTV>)
+
 }

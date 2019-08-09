@@ -7,14 +7,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.movie_item.view.*
 import net.esfun.tmdb.data.model.TmdbMovie
+import net.esfun.tmdb.data.model.TmdbTV
 
-class MovieAdapter(
-    private var list: ArrayList<TmdbMovie>
-) : RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
+class TVAdapter(
+    private var list: ArrayList<TmdbTV>
+) : RecyclerView.Adapter<TVAdapter.ViewHolder>() {
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.txtName.text = list[position].title
+        holder.txtName.text = list[position].name
         holder.txtOverview.text = list[position].overview
         holder.txtVote.text = "${list[position].voteAverage}"
         holder.imageView.loadUsualImage("https://image.tmdb.org/t/p/w500${list[position].backdropPath}")

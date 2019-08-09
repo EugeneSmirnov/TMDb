@@ -4,6 +4,7 @@ import net.esfun.tmdb.data.TmdbDataSource
 import net.esfun.tmdb.data.model.TmdbMovie
 import net.esfun.tmdb.data.model.TmdbMovieResponse
 import net.esfun.tmdb.data.model.TmdbTV
+import net.esfun.tmdb.data.model.TmdbTVResponse
 import okhttp3.ConnectionPool
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -68,8 +69,8 @@ object ImplRemoteDAO: TmdbDataSource {
         return ImplRemoteDAO.api.getTV(id, language)
     }
 
-    override suspend fun getPopularTV(): List<TmdbTV> {
-        return ImplRemoteDAO.api.getPopularTV(language)
+    override suspend fun getPopularTV(page: Int): TmdbTVResponse {
+        return ImplRemoteDAO.api.getPopularTV(language, page)
     }
 
 }

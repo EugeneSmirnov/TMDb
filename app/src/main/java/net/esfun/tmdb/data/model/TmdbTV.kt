@@ -14,6 +14,9 @@ data class TmdbTV(
     val name: String,
     val overview: String,
 
+    @SerializedName("backdrop_path")
+    val backdropPath: String,
+
     @SerializedName("poster_path")
     val posterPath: String,
 
@@ -30,5 +33,5 @@ data class TmdbTVResponse(
     @SerializedName("total_pages")
     val totalPages: Int,
 
-    val results: List<TmdbMovie>
+    val results: List<TmdbTV>
 )
