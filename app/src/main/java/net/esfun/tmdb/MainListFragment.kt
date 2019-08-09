@@ -68,12 +68,12 @@ class MainListFragment : Fragment() {
         }
     }
 
-    private fun <T> setData(arrayList: ArrayList<T>, liveData:LiveData<List<T>>){
+    private fun <T> setData(arrayList: ArrayList<T>, liveData: LiveData<List<T>>) {
 
         liveData.observe(this,
             Observer {
-                var rText="Loaded ${it?.size}"
-                if (it?.size==0)  rText="Loading..."
+                var rText = "Loaded ${it?.size}"
+                if (it?.size == 0) rText = "Loading..."
                 Toast.makeText(activity, rText, Toast.LENGTH_SHORT).show()
                 arrayList.clear()
                 arrayList.addAll(it)
