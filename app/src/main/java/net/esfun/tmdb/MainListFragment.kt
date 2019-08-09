@@ -10,7 +10,6 @@ import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import kotlinx.android.synthetic.main.fragment_movies_list.*
-import net.esfun.tmdb.data.MainViewModel
 import net.esfun.tmdb.data.model.TmdbMovie
 import net.esfun.tmdb.data.model.TmdbTV
 

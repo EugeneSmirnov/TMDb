@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import net.esfun.tmdb.data.MainViewModel
 
 
 class MainActivity : AppCompatActivity() {

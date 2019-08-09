@@ -1,4 +1,4 @@
-package net.esfun.tmdb.data
+package net.esfun.tmdb
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -41,10 +41,6 @@ class MainViewModel : ViewModel() {
             fetchTV()
         }
         return tvs
-    }
-
-    fun <T> getFromDb(list: List<T>){
-
     }
 
     fun fetchMovie() {

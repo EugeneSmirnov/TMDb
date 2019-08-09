@@ -15,6 +15,4 @@ interface TmdbDataSource {
 
     suspend fun getLatestTV():TmdbTVResponse
     suspend fun getLatestMovie(): TmdbMovieResponse
-
-
 }
