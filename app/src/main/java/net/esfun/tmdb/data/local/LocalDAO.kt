@@ -7,9 +7,6 @@ import net.esfun.tmdb.data.model.TmdbMovie
 import net.esfun.tmdb.data.model.TmdbTV
 import androidx.room.OnConflictStrategy
 
-
-
-
 @Dao interface LocalDAO {
 
     @Query("Select * FROM movies")
